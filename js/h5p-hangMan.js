@@ -49,7 +49,9 @@ H5P.HangMan=(function($,UI){
 
 
             for(i=0;i<word.length;i++){
+
               var  guess = document.createElement('li');
+
               guess.setAttribute('class', 'guess');
               if (word[i] === " ") {
                   guess.innerHTML = " ";
@@ -75,11 +77,11 @@ H5P.HangMan=(function($,UI){
             $(this).attr("disabled", true);
             for(i=0;i<word.length;i++){
                 if(word[i]===this.innerHTML){
-                  guess.innerHTML=this.innerHTML;
+                  guesses[i].innerHTML=this.innerHTML;
 
                 }
-
             }
+
 
       });
       }
