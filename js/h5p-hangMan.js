@@ -155,26 +155,36 @@ H5P.HangMan=(function($,UI){
 
       $letter.click(function(){
             $(this).attr("disabled", true);
-
+            var flag=0;
             for(i=0;i<word.length;i++){
                 if(word[i]===this.innerHTML){
                   guesses[i].innerHTML=this.innerHTML;
+                  flag=1;
                 }
-
+                // else {
+                //   livesChoosen -= 1;
+                //       comments();
+                // }
 
               }
+              if(flag!==1){
+                livesChoosen -= 1;
+                      comments();
+                      animate();
+              }
 
-              var j = (word.indexOf(guess));
-              console.log(j);
 
-                if (j === -1) {
-                  livesChoosen -= 1;
-                  comments();
-                  animate();
-                }
-                else {
-                  comments();
-                }
+              // var j = (word.indexOf(guess));
+              // console.log(j);
+              //
+              //   if (j === -1) {
+              //     livesChoosen -= 1;
+              //     comments();
+              //     animate();
+              //   }
+              //   else {
+              //     comments();
+              //   }
 
 
 
