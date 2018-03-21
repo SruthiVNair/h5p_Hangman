@@ -72,11 +72,13 @@ margin-top: 60px;
      width: 45%;
      height: auto;
    }
-   .div-right{
+   #div-right{
       display:inline-block;
       border: solid 1px red;
-      height: 15em;
+      height: 16em;
       width:25%;
+      border-radius: 3px;
+      text-align: center;
     }
     /*.flex-rectangle{
     width: 25%;
